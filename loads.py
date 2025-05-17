@@ -4,6 +4,7 @@ from pathlib import Path
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_ids = ["Qwen/Qwen2.5-1.5B-Instruct",
+             "Qwen/Qwen2.5-7B-Instruct"
 ]
 
 def load_model(model_id: str):
