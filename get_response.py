@@ -2,9 +2,8 @@ import json
 from tqdm import tqdm
 from loads import load_model
 
-def create_response(model_id, system_prompt, user_prompt) :
+def create_response(model, tokenizer, system_prompt, user_prompt) :
 
-    model, tokenizer = load_model(model_id)
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt}
@@ -30,11 +29,12 @@ def create_response(model_id, system_prompt, user_prompt) :
 
 def process_list(model_id, system_prompt, user_prompts, output_path="responses.json"):
     
+    model, tokenizer = load_model(model_id)
     results = {}
     for category, prompts in user_prompts.items():
         results[category] = []
         for prompt in tqdm(prompts, desc=f"Processing category: {category}"):
-            response = create_response(model_id, system_prompt, prompt)
+            response = create_response(model, tokenizer, system_prompt, prompt)
             results[category].append({
                 "prompt": prompt,
                 "response": response
