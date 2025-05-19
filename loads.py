@@ -4,7 +4,7 @@ from pathlib import Path
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_ids = ["Qwen/Qwen2.5-1.5B-Instruct",
-             "Qwen/Qwen2.5-7B-Instruct"
+             "Qwen/Qwen2.5-7B-Instruct",
 ]
 
 def load_model(model_id: str):
@@ -26,7 +26,12 @@ def load_user_prompts(path: str) -> Dict[str, List[str]]:
         data = json.load(f)
     return data
 
-def load_system_prompts(path: str):
+def load_system_prompts(path: str, secret: str):
     with open(path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    return data
+        data = json.load(f)["system_prompts"]
+
+    formatted_data = {
+        key: value.replace("{secret}", secret)
+        for key, value in data.items()
+    }
+    return formatted_data
