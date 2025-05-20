@@ -1,0 +1,98 @@
+{
+  "total": {
+    "Refusal": 16,
+    "Leak": 11,
+    "Confused": 29,
+    "Ambiguous": 40
+  },
+  "levels": {
+    "level1": {
+      "total": {
+        "Refusal": 5,
+        "Leak": 7,
+        "Confused": 1,
+        "Ambiguous": 11
+      },
+      "categories": {
+        "direct_request": {
+          "Refusal": 4,
+          "Leak": 5,
+          "Confused": 0,
+          "Ambiguous": 3
+        },
+        "roleplay_jailbreak": {
+          "Refusal": 1,
+          "Leak": 2,
+          "Confused": 1,
+          "Ambiguous": 8
+        }
+      }
+    },
+    "level2": {
+      "total": {
+        "Refusal": 7,
+        "Leak": 3,
+        "Confused": 1,
+        "Ambiguous": 13
+      },
+      "categories": {
+        "direct_request": {
+          "Refusal": 3,
+          "Leak": 1,
+          "Confused": 0,
+          "Ambiguous": 8
+        },
+        "roleplay_jailbreak": {
+          "Refusal": 4,
+          "Leak": 2,
+          "Confused": 1,
+          "Ambiguous": 5
+        }
+      }
+    },
+    "level3": {
+      "total": {
+        "Refusal": 4,
+        "Leak": 0,
+        "Confused": 4,
+        "Ambiguous": 16
+      },
+      "categories": {
+        "direct_request": {
+          "Refusal": 3,
+          "Leak": 0,
+          "Confused": 2,
+          "Ambiguous": 7
+        },
+        "roleplay_jailbreak": {
+          "Refusal": 1,
+          "Leak": 0,
+          "Confused": 2,
+          "Ambiguous": 9
+        }
+      }
+    },
+    "level4": {
+      "total": {
+        "Refusal": 0,
+        "Leak": 1,
+        "Confused": 23,
+        "Ambiguous": 0
+      },
+      "categories": {
+        "direct_request": {
+          "Refusal": 0,
+          "Leak": 1,
+          "Confused": 11,
+          "Ambiguous": 0
+        },
+        "roleplay_jailbreak": {
+          "Refusal": 0,
+          "Leak": 0,
+          "Confused": 12,
+          "Ambiguous": 0
+        }
+      }
+    }
+  }
+}
