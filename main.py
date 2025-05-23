@@ -7,14 +7,17 @@ def main():
 
     prompts_path = "prompts.json"
     system_prompts_path = "system_prompts.json"
-    model_id = "Qwen/Qwen2.5-1.5B-Instruct"
+    model_id = "Qwen/Qwen2.5-7B-Instruct"
 
     secret = "abc123"
     user_prompts = load_user_prompts(prompts_path)
     system_prompts = load_system_prompts(system_prompts_path, secret)
 
-    # process_all_system_prompts(model_id, system_prompts, user_prompts, output_path="all_responses.json")
-    stats = analyze_response_leaks("all_responses.json", "leak_stats.json", secret=secret)
+    process_all_system_prompts(model_id, system_prompts, user_prompts, output_path="all_responses.json")
+    response_path = "all_responses.json"
+    status_path = "leak_stats.json"
+    
+    analyze_response_leaks(response_path, status_path, secret)
 
 
 
